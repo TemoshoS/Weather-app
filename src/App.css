@@ -1,38 +1,140 @@
-.App {
-  text-align: center;
+body {
+  background-color: rgb(31, 40, 83);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.nav-weather {
+  width: 100%;
+  background-color: rgb(8, 8, 51);
+  height: 80px;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+
+}
+
+.world {
+
+  font-size: 2rem;
+  color: green;
+  filter: drop-shadow(0 0 5px blue);
+  margin-right: 15px;
+
+}
+
+
+.nav-weather h1 {
+
+  color: rgba(255, 255, 255, 0.719);
+
+}
+
+.search-input {
+  border-radius: 10px;
+  width: 30%;
+  height: 6vh;
+  margin-top: 50px;
+  border: none;
+}
+
+.search-input:focus {
+  outline: 1px solid rgb(0, 247, 255);
+}
+
+
+.search-button {
+  border-radius: 10px;
+  height: 6vh;
+  font-weight: bold;
+  background-color: darkblue;
+  border: none;
+  padding: 0 20px;
+  color: white;
+  font-size: 1.2rem;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.fahrenheit-button {
+  width: 10%;
+  padding: 10px 0;
+  font-weight: bold;
+  border-radius: 2px;
+  color: rgb(79, 79, 211);
+  border: 1px solid rgb(79, 79, 211);
+  font-size: 1rem;
+  background-color: rgb(8, 8, 51);
+}
+
+.fahrenheit-button:focus {
+  color: white;
+  outline: none;
+  background-color: rgb(79, 79, 211);
+}
+
+.celcius-button {
+  width: 10%;
+  padding: 10px 0;
+  font-weight: bold;
+  border-radius: 2px;
+  color: rgb(79, 79, 211);
+  border: 1px solid rgb(79, 79, 211);
+  font-size: 1rem;
+  background-color: rgb(8, 8, 51);
+}
+
+.celcius-button:focus {
+  color: white;
+  outline: none;
+  background-color: rgb(79, 79, 211);
+}
+
+.main-card {
+
+  background-image: linear-gradient(to right, #68BBE3 0%, #0E86D4 60%, #055C9D 100%);
+  width: 70%;
+  height: 40vh;
+  margin: 10vh auto;
+  border-radius: 10px;
+  color: white;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 20%;
+}
+
+.cards-container {
+  display: flex;
+  margin-left: 16%;
+}
+
+.wind-card,
+.humidity-card,
+.cloud-card {
+  background-color: #174066;
+  width: 20%;
+  height: auto;
+  border-radius: 5px;
+  margin-right: 10%;
+  color: rgba(255, 255, 255, 0.719);
+  text-align: center;
+
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20%;
+  font-weight: bold;
+  margin-top: 9%;
+  margin-bottom: 9%;
+  font-size: 1.1em;
+}
+
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
