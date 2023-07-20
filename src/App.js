@@ -12,7 +12,7 @@ function App() {
   const [city, setCity] = useState('pretoria');
   const {weatherdata, refetch,error}=  WeatherService(city);
   const [isCelsius, setCelscius] = useState(true);
-  console.log(weatherdata);
+  
 
 
  const image = 'https://openweathermap.org/img/wn/' + weatherdata?.weather[0].icon+'.png';
@@ -88,8 +88,8 @@ const temperature = isCelsius
         <p>{weatherdata.weather[0].description}</p>
     </div>
 
-    <div style={{ fontSize: '5rem' }}>
-          <img src={image}/>
+    <div >
+          <img style={{width:'150px',height:'150px'}} src={image}/>
     </div>
 
 </div>
