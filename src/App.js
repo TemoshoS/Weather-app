@@ -62,34 +62,32 @@ const temperature = isCelsius
     </span></form>
 </div>
 
-<div className='error'>
-{error && <h1 >{error}</h1>}
-</div>
+<div className="error">{error && <h1>{error}</h1>}</div>
 
 {weatherdata && (<div>
 
 <div className='main-card'>
 
-    <div>
+    <div className='temp-city'>
         <h1>{temperature}</h1>
         <p>{weatherdata.name}, {weatherdata.sys.country}</p>
 
     </div>
 
-    <div>
+    <div className='temp-date'>
         <h2>13°/14°</h2>
         <p>Feels like {temperature}</p>
         <p><CurrentDate /></p>
 
     </div>
 
-    <div>
+    <div className='temp-weather'>
         <h1>{weatherdata.weather[0].main}</h1>
         <p>{weatherdata.weather[0].description}</p>
     </div>
 
-    <div style={{ fontSize: '5rem' }}>
-          <img src={image}/>
+    <div className='temp-icon'>
+          <img style={{width:'150px',height:'150px'}} src={image} alt='weather icon'/>
     </div>
 
 </div>

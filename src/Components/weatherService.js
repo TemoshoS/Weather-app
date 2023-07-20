@@ -10,16 +10,16 @@ const WeatherService = (city) => {
     const getWeatherData = async () => {
 
         try {
-            const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${'99f15432440767404ea4aad63a10b355'}`;
+            const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
             const res = await axios.get(apiUrl);
             setWeatherData(res.data);
-
-            console.log(res.data)
+            setError('');
 
         } catch (error) {
 
             setWeatherData(null);
             setError('City does not exist');
+            alert('City does not exist');
 
         }
 
@@ -35,7 +35,7 @@ const WeatherService = (city) => {
 
 
 
-    return {weatherdata,refetch}
+    return {weatherdata,refetch, error}
 }
 
 export default WeatherService
