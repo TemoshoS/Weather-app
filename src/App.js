@@ -12,7 +12,7 @@ function App() {
   const [city, setCity] = useState('pretoria');
   const {weatherdata, refetch,error}=  WeatherService(city);
   const [isCelsius, setCelscius] = useState(true);
-  console.log(weatherdata);
+  
 
 
  const image = 'https://openweathermap.org/img/wn/' + weatherdata?.weather[0].icon+'.png';
