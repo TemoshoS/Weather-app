@@ -91,7 +91,7 @@ body {
 .main-card {
 
   background-image: linear-gradient(to right, #68BBE3 0%, #0E86D4 60%, #055C9D 100%);
-  width: 70%;
+  width: 90%;
   height: 40vh;
   margin: 10vh auto;
   border-radius: 10px;
@@ -99,12 +99,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20%;
+  gap:5%;
 }
 
 .cards-container {
   display: flex;
   margin-left: 16%;
+  margin-bottom: 30px;
 }
 
 .wind-card,
@@ -140,6 +141,23 @@ body {
 }
 
 /*For smaller screen*/
+@media (max-width: 600px) {
+  .main-card {
+    width: 100%;
+    
+  }
+
+  .temp-city p{ 
+     font-size: 12px;
+  }
+
+  .temp-date p{ 
+    font-size: 12px;
+ }
+
+  
+}
+
 @media (max-width: 768px) {
 
   
@@ -171,7 +189,7 @@ body {
 .search-input {
   border-radius: 10px;
   width: 50%;
-  height: 3vh;
+  height: 5vh;
   margin-top: 50px;
   border: none;
 }
@@ -182,16 +200,9 @@ body {
 
 
 .search-button {
-  border-radius: 10px;
-  height: 3vh;
-  font-weight: bold;
-  background-color: darkblue;
-  border: none;
-  padding: 0 20px;
-  color: white;
-  font-size: 1rem;
-  margin-left: 40px;
-  cursor: pointer;
+ 
+  height: 5vh;
+  
 }
 
 .fahrenheit-button {
@@ -233,12 +244,9 @@ body {
 .main-card {
 
   background-image: linear-gradient(to right, #68BBE3 0%, #0E86D4 60%, #055C9D 100%);
-  width: 80%;
-  height: 70vh;
-  margin: 10vh auto;
-  border-radius: 10px;
-  color: white;
-  
+  width: 50%;
+  height: auto;
+ 
 }
 
 .temp-city{
